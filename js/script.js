@@ -1,8 +1,24 @@
-let encriptables = ['a', 'e', 'i', 'o', 'u'];
+function reiniciarTextarea() {
+    document.getElementById('texto-ingresado').value = '';
+}
 
+function cambiarEstilos() {
+    document.getElementsByClassName('output__imagen')[0].style.display = 'none';
+    document.getElementsByClassName('output__mensajeNoEncontrado')[0].style.display = 'none';
+    document.getElementsByClassName('output__ingresarTexto')[0].style.display = 'none';
+    document.getElementsByClassName('output')[0].style.alignItems = 'start';
+    document.getElementsByClassName('output')[0].style.justifyContent = 'space-between';
+    document.getElementsByClassName('output__copiar')[0].style.display = 'block';
+}
+
+function copiarTexto() {
+    navigator.clipboard.writeText(document.getElementById('output__texto').value);
+}
+
+/* ========== ENCRIPTAR ========== */
 
 function encriptarTexto() {
-    let textoUsuario = document.getElementById('texto-ingresado').value;
+    let textoUsuario = document.getElementById('texto-ingresado').value.toLowerCase();
     let textoEncriptado = '';
 
     for (var i = 0; i < textoUsuario.length; i++) {
@@ -35,17 +51,7 @@ function encriptar(letra) {
     }
 }
 
-function reiniciarTextarea() {
-    document.getElementById('texto-ingresado').value = '';
-}
-
-function cambiarEstilos() {
-    document.getElementsByClassName('output__imagen')[0].style.display = 'none';
-    document.getElementsByClassName('output__mensajeNoEncontrado')[0].style.display = 'none';
-    document.getElementsByClassName('output__ingresarTexto')[0].style.display = 'none';
-    document.getElementsByClassName('output')[0].style.alignItems = 'start';
-    document.getElementsByClassName('output')[0].style.justifyContent = 'start';
-}
+/* ========== DESENCRIPTAR ========== */
 
 function desencriptarTexto() {
     let textoUsuario = document.getElementById('texto-ingresado').value;

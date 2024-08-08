@@ -130,15 +130,27 @@ body {
 }
 
 #output__texto {
-    white-space: normal; /* Permitir saltos de línea automáticos */
-    word-wrap: break-word; /* Permitir que palabras largas se dividan en varias líneas */
-    overflow-wrap: break-word; /* Otra propiedad para controlar el ajuste de las palabras */
-    max-width: 100%; /* Limitar la anchura máxima al 100% del contenedor padre */
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
     font-family: var(--font);
     font-weight: 400;
     font-size: 1.5rem;
     color: var(--gray-400);
     text-align: start;
+}
+
+.output__copiar {
+    display: none;
+    margin-top: 2rem;
+    width: 100%;
+    background-color: var(--light-blue-100);
+    color: var(--dark-blue-300);
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    border: 2px solid var(--dark-blue-300);
+    border-radius: 1.5rem;
 }
 
 @media (min-width: 768px) and (max-width: 1440px) {
