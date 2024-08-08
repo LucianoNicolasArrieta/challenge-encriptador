@@ -12,17 +12,19 @@
         <img src="assets/alura-logo.png" alt="Logo de Alura latam">
     </header>
     <main>
-        <section class="input">
-            <textarea class="input__texto" name="texto-ingresado" id="texto-ingresado" placeholder="Ingrese el texto aqui"></textarea>
-            <div class="input__advertencia">
-                <img class="input__advertencia__icono" src="assets/exclamation-icon.png" alt="exclamation-icon">
-                <p class="input__advertencia__texto">Solo letras minúsculas y sin acentos</p>
-            </div>
-        </section>
-        <section class="botones">
-            <button class="botones__encriptar">Encriptar</button>
-            <button class="botones__desencriptar">Desencriptar</button>
-        </section>
+        <div class="input">
+            <section class="input__texto">
+                <textarea class="input__texto__campo" name="texto-ingresado" id="texto-ingresado" placeholder="Ingrese el texto aqui"></textarea>
+                <div class="input__texto__advertencia">
+                    <img class="input__texto__advertencia__icono" src="assets/exclamation-icon.png" alt="exclamation-icon">
+                    <p class="input__texto__advertencia__texto">Solo letras minúsculas y sin acentos</p>
+                </div>
+            </section>
+            <section class="input__botones">
+                <button class="input__botones__encriptar">Encriptar</button>
+                <button class="input__botones__desencriptar">Desencriptar</button>
+            </section>
+        </div>
         <section class="output">
             <img class="output__imagen" src="assets/muneco.png" alt="">
             <p class="output__resaltado">Ningún mensaje fue encontrado</p>

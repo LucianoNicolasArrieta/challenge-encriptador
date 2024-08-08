@@ -29,12 +29,12 @@ body {
     
 }
 
-.input {
+.input__texto {
     margin: 2rem 0;
     width: 100%;
 }
 
-.input__texto {
+.input__texto__campo {
     height: 35vh;
     width: 100%;
     border: 0;
@@ -46,36 +46,36 @@ body {
     background-color: var(--light-blue-100);
 }
 
-.input__texto::placeholder {
+.input__texto__campo::placeholder {
     color: var(--dark-blue-300);
     font-family: var(--font);
     font-weight: 400;
     font-size: 2rem;
 }
 
-.input__texto:focus {
+.input__texto__campo:focus {
     outline:none;
 }
 
-.input__advertencia {
+.input__texto__advertencia {
     display: flex;
 }
 
-.input__advertencia__icono {
+.input__texto__advertencia__icono {
     margin-right: 0.5rem;
 }
 
-.input__advertencia__texto {
+.input__texto__advertencia__texto {
     color: var(--gray-400);
 }
 
-.botones {
+.input__botones {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.botones__encriptar {
+.input__botones__encriptar {
     background-color: var(--dark-blue-300);
     color: var(--white);
     padding: 1.5rem 0;
@@ -84,7 +84,7 @@ body {
     border-radius: 1.5rem;
 }
 
-.botones__desencriptar {
+.input__botones__desencriptar {
     background-color: var(--light-blue-100);
     color: var(--dark-blue-300);
     padding: 1.5rem 0;
@@ -120,4 +120,56 @@ body {
 .output__texto {
     font-size: 1rem;
     color: var(--gray-400);
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    .input__botones {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .input__botones__encriptar, .input__botones__desencriptar {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        margin: 1.5rem 2rem 1.5rem 7rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .input {
+        width: 40vw;
+        margin-left: 10em;
+        margin-top: 5rem;
+    }
+
+    .input__texto__campo {
+        height: 50vh;
+    }
+
+    .input__botones {
+        flex-direction: row;
+        margin-bottom: 2rem;
+    }
+
+    .input__botones__encriptar, .input__botones__desencriptar {
+        width: 20.5rem;
+    }
+
+    .output {
+        max-width: 28vw;
+    } 
+
+    .output__imagen {
+        display: block;
+        margin-bottom: 2rem;
+    }
 }
