@@ -14,22 +14,25 @@
     <main>
         <div class="input">
             <section class="input__texto">
-                <textarea class="input__texto__campo" name="texto-ingresado" id="texto-ingresado" placeholder="Ingrese el texto aqui"></textarea>
+                <textarea class="input__texto__campo" name="texto-ingresado" id="texto-ingresado" placeholder="Ingrese el texto aquí"></textarea>
                 <div class="input__texto__advertencia">
                     <img class="input__texto__advertencia__icono" src="assets/exclamation-icon.png" alt="exclamation-icon">
                     <p class="input__texto__advertencia__texto">Solo letras minúsculas y sin acentos</p>
                 </div>
             </section>
             <section class="input__botones">
-                <button class="input__botones__encriptar">Encriptar</button>
+                <button class="input__botones__encriptar" onclick="encriptarTexto();">Encriptar</button>
                 <button class="input__botones__desencriptar">Desencriptar</button>
             </section>
         </div>
         <section class="output">
+            <p id="output__texto"></p>
             <img class="output__imagen" src="assets/muneco.png" alt="">
-            <p class="output__resaltado">Ningún mensaje fue encontrado</p>
-            <p class="output__texto">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <p class="output__mensajeNoEncontrado">Ningún mensaje fue encontrado</p>
+            <p class="output__ingresarTexto">Ingresa el texto que desees encriptar o desencriptar.</p>
         </section>
     </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

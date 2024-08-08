@@ -106,18 +106,25 @@ body {
     box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08);
 }
 
+#output__texto {
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--gray-400);
+}
+
 .output__imagen {
     display: none;
 }
 
-.output__resaltado {
+.output__mensajeNoEncontrado {
     font-size: 1.5rem;
     color: var(--gray-500);
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
-.output__texto {
+.output__ingresarTexto {
     font-size: 1rem;
     color: var(--gray-400);
 }
@@ -165,7 +172,7 @@ body {
     }
 
     .output {
-        max-width: 28vw;
+        width: 28vw;
     } 
 
     .output__imagen {
