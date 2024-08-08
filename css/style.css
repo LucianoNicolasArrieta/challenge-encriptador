@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    --white: #fff;
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500: #052051;
+    --light-blue-100: #F3F5FC;
+    --light-blue-200: #EFF1FA;
+    --light-blue-300: #E9ECF8;
+    --light-blue-400: #AAB2D5;
+    --light-blue-500: #757FB2;
+    --gray-100: #CED4DA;
+    --gray-200: #ADB5BD;
+    --gray-300: #868E96;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+    --font: "Inter", sans-serif;
+
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-blue-100);
+    margin: 1.5rem 1rem;
+    font-family: var(--font);
+    
+}
+
+.input {
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.input__texto {
+    height: 35vh;
+    width: 100%;
+    border: 0;
+    resize: none;
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--dark-blue-300);
+    background-color: var(--light-blue-100);
+}
+
+.input__texto::placeholder {
+    color: var(--dark-blue-300);
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.input__texto:focus {
+    outline:none;
+}
+
+.input__advertencia {
+    display: flex;
+}
+
+.input__advertencia__icono {
+    margin-right: 0.5rem;
+}
+
+.input__advertencia__texto {
+    color: var(--gray-400);
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.botones__encriptar {
+    background-color: var(--dark-blue-300);
+    color: var(--white);
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 1.5rem;
+}
+
+.botones__desencriptar {
+    background-color: var(--light-blue-100);
+    color: var(--dark-blue-300);
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    border: 2px solid var(--dark-blue-300);
+    border-radius: 1.5rem;
+}
+
+.output {
+    margin-top: 3rem;
+    padding: 3rem;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08);
+}
+
+.output__imagen {
+    display: none;
+}
+
+.output__resaltado {
+    font-size: 1.5rem;
+    color: var(--gray-500);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.output__texto {
+    font-size: 1rem;
+    color: var(--gray-400);
+}
