@@ -12,7 +12,7 @@ function cambiarEstilos() {
 }
 
 function copiarTexto() {
-    navigator.clipboard.writeText(document.getElementById('output__texto').value);
+    navigator.clipboard.writeText(document.getElementById('output__texto').innerText);
 }
 
 /* ========== ENCRIPTAR ========== */
