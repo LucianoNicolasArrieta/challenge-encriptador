@@ -129,6 +129,18 @@ body {
     color: var(--gray-400);
 }
 
+#output__texto {
+    white-space: normal; /* Permitir saltos de línea automáticos */
+    word-wrap: break-word; /* Permitir que palabras largas se dividan en varias líneas */
+    overflow-wrap: break-word; /* Otra propiedad para controlar el ajuste de las palabras */
+    max-width: 100%; /* Limitar la anchura máxima al 100% del contenedor padre */
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--gray-400);
+    text-align: start;
+}
+
 @media (min-width: 768px) and (max-width: 1440px) {
     .input__botones {
         flex-direction: row;

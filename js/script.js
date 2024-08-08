@@ -7,7 +7,7 @@ function encriptarTexto() {
 
     for (var i = 0; i < textoUsuario.length; i++) {
         console.log(i);
-        var letraEncriptada = encriptar(textoUsuario[i])
+        var letraEncriptada = encriptar(textoUsuario[i]);
         textoEncriptado = textoEncriptado.concat(letraEncriptada);
     }
 
@@ -45,4 +45,27 @@ function cambiarEstilos() {
     document.getElementsByClassName('output__ingresarTexto')[0].style.display = 'none';
     document.getElementsByClassName('output')[0].style.alignItems = 'start';
     document.getElementsByClassName('output')[0].style.justifyContent = 'start';
+}
+
+function desencriptarTexto() {
+    let textoUsuario = document.getElementById('texto-ingresado').value;
+    let textoDesencriptado = desencriptar(textoUsuario);
+
+    reiniciarTextarea();
+    cambiarEstilos();
+
+    let output = document.getElementById('output__texto');
+    output.innerHTML = textoDesencriptado;
+}
+
+function desencriptar(textoUsuario) {
+    let textoDesencriptado = textoUsuario;
+
+    textoDesencriptado = textoDesencriptado.replaceAll("ai", "a");
+    textoDesencriptado = textoDesencriptado.replaceAll("enter", "e");
+    textoDesencriptado = textoDesencriptado.replaceAll("imes", "i");
+    textoDesencriptado = textoDesencriptado.replaceAll("ober", "o");
+    textoDesencriptado = textoDesencriptado.replaceAll("ufat", "u");
+
+    return textoDesencriptado
 }
